@@ -1,0 +1,1274 @@
+/*header样式开始-----*/
+img{border:none;display: block;}
+
+/*kv上固定的悬浮窗口*/
+.imgWrap{
+	overflow: hidden;
+}
+.imgWrap img{
+	width:100%;
+	height: 100%;
+}
+.kv-fixed {
+	width: 50px;
+	position: fixed;
+	right: 0%;
+	top: 0%;
+	margin-right: 0.5%;
+	margin-top: 18%;
+	z-index: 500;
+}
+
+.kv-fixed li {
+	padding: 50%;
+	background: #0c121c no-repeat center center;
+	border-bottom: 1px solid #4e4e4e;
+	position: relative;
+	cursor: pointer;
+}
+
+
+/*悬浮的背景图片的设置*/
+
+.kv-fixed .fixed1 {
+	background-image: url(../images/index/cuxiao1.png);
+}
+
+.kv-fixed .fixed2 {
+	background-image: url(../images/index/cuxiao2.png);
+}
+
+.kv-fixed .fixed3 {
+	background-image: url(../images/index/cuxiao3.png);
+}
+
+.kv-fixed .fixed4 {
+	border-bottom: 0;
+	background-image: url(../images/index/cuxiao4.png);
+}
+
+
+/*悬浮的文字*/
+
+.kv-fixed li a {
+	width: 98px;
+	background: rgb(222, 0, 17);
+	background: rgba(222, 0, 17, 0.9);
+	display: inline;
+	font-size: 16px;
+	padding: 0 34%;
+	text-align: center;
+	color: #fff;
+	line-height: 50px;
+	position: absolute;
+	right: 100%;
+	top: 0;
+	display: none;
+}
+
+.kv-fixed li:hover {
+	background-color: #c90212;
+}
+
+.kv-fixed li:hover a {
+	display: block;
+}
+
+.common_center {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.common_box {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.common_top {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+}
+
+
+/*JMC江铃汽车图*/
+
+.common_top .top_left img {
+	margin-top: 13px;
+	display: block;
+}
+
+
+/*顶部右边*/
+
+.common_top .top_right li {
+	float: left;
+	margin-left: 30px;
+	position:relative;
+}
+
+.common_top .top_right li a {
+	position: relative;
+	color: #999;
+	display: block;
+}
+
+/*顶部右边的背景图*/
+.common_top .top_right i {
+	width: 15px;
+	height: 19px;
+	margin-top: 10px;
+	margin-right: 7px;
+	float: left;
+	left: -21px;
+	top: 0px;
+	background-repeat: no-repeat;
+}
+
+.laydate_body .laydate_y {
+	margin-right: 0px!important;
+}
+
+.common_top .jingxiao i {
+	background-image: url("../images/jingxiao.png");
+}
+
+.common_top .kehu i {
+	background-image: url("../images/kehu.png");
+}
+
+.common_top .lianxi i {
+	width: 17px;
+	height: 17px;
+	margin-top: 11.5px;
+	background-image: url("../images/lianxi.png");
+}
+
+.common_top .chexing i {
+	width: 21px;
+	height: 14px;
+	margin-top: 13px;
+	background-image: url("../images/chexing.png");
+}
+
+.common_top .top_right li:hover>a {
+	color: #de0011;
+}
+.common_top .jingxiao:hover i {
+	background-image: url("../images/jingxiao-act.png");
+}
+.common_top .kehu:hover i {
+	background-image: url("../images/kehu-act.png");
+}
+.common_top .lianxi:hover i {
+	background-image: url("../images/lianxi-act.png");
+}
+.common_top .chexing:hover i {
+	background-image: url("../images/chexing-act.png");
+}
+
+/*车型开始*/
+.common_top .chexing{
+	padding-right: 15px;
+	background:url(../images/chexing-down.png) no-repeat right center;
+}
+.common_top .chexing:hover{
+	background:url(../images/chexing-down-act.png) no-repeat right center;
+}
+.common_top .chexing:hover .chexing_wrap{
+	display: block;
+}
+/* 车型列表容器 */
+.common_top .chexing_wrap{
+	width: 100%;
+	position:absolute;
+	background:#f8f8f8;
+	display: none;
+	top: 100%;
+	line-height:40px;
+	text-align: center;
+	z-index: 2000;
+}
+/*每个车型*/
+.common_top .chexing_wrap a{
+	display: block;
+	color:#444;
+	border-top:1px solid #dfdfdf;
+}
+.common_top .chexing_wrap a:hover{
+	color:#fff;	
+	background:#de0011;
+}
+/*导航开始*/
+
+.common_nav {
+	font-size: 16px;
+	position: relative;
+	background: #fff;
+}
+
+
+/*导航的logo*/
+
+.common_nav .nav_logo {
+	width: 10.93%;
+}
+
+.common_nav .nav_logo img {
+	width: 100%;
+	display: block;
+	margin-top: 24px;
+}
+
+
+/*pad的导航按钮*/
+
+.menu_wrap_icon {
+	display: none;
+	z-index: 99;
+}
+
+
+/*导航列表*/
+
+.common_nav .menu {
+	width: 51.56%;
+}
+
+
+/*每一个导航的样式*/
+.common_nav .nav_act{
+	background: #eee;
+}
+.common_nav .menu>li {
+	width: 16.65%;
+	line-height: 90px;
+	text-align: center;
+	position: relative;
+	float: left;
+	color: #666;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+/*为首页单独写的样式*/
+
+.common_nav li a {
+	color: inherit;
+	display: block;
+}
+
+
+/*下边的小箭头*/
+
+.common_nav .menu>li i {
+	width: 21px;
+	height: 10px;
+	background: url("../images/nav-icon.png") no-repeat;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -10px;
+	display: none;
+}
+
+
+/*导航hover*/
+
+.common_nav .menu>li:hover {
+	background: #eee;
+	color: #000;
+}
+
+
+/*箭头+下拉菜单 出现  红条在js中控制*/
+
+.common_nav .has_dropdown:hover i,
+.common_nav .has_dropdown:hover .dropdown_menu {
+	display: block;
+}
+
+
+/*导航下拉的背景颜色*/
+
+.nav_redBg {
+	width: 100%;
+	height: 80px;
+	background: #de0011;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	z-index: 800;
+}
+
+
+/*下拉菜单*/
+
+.common_nav .dropdown_menu {
+	overflow: hidden;
+	position: absolute;
+	top: 100%;
+	z-index: 900;
+	display: none;
+}
+
+
+/*下拉菜单的每一个子选项*/
+
+.common_nav .dropdown_menu li {
+	width: 110px;
+	float: left;
+	text-align: center;
+	line-height: 80px;
+	background:#de0011;
+}
+
+.common_nav .dropdown_menu li a {
+	display: block;
+	border: 1px solid #c7000f;
+	border-width: 0 1px 0 0;
+	color: #fff;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+/*下拉菜单hover*/
+
+.common_nav .dropdown_menu a:hover {
+	background: #000;
+}
+
+
+/*header样式结束-----*/
+
+
+/*-----------------------头部的媒体查询开始-------------------------------------------*/
+
+
+/*1000-1200*/
+
+@media screen and (max-width:1200px) and (min-width: 1000px) {
+	/*定义安全距离*/
+	.common_center {
+		width: 100%;
+	}
+	.tiyan a {
+		font-size: 14px;
+	}
+}
+
+
+/*头部的媒体查询 768-1000（平板）*/
+
+@media screen and (max-width:999px) {
+	/*定义安全距离*/
+	.common_center {
+		width: 92%;
+	}
+	.common_nav {
+		height: auto;
+	}
+	/*头部的logo*/
+	.common_nav .nav_logo {
+		width: 14%;
+		margin-left: 4.565%;
+	}
+	.common_nav .nav_logo img {
+		margin: 17.14% 0;
+	}
+	.common_nav .common_center {
+		position: relative;
+		width: 100%;
+	}
+	/*导航图标容器位置*/
+	.menu_wrap_icon {
+		width: 4%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 3% 4.2% 0 0;
+		cursor: pointer;
+		display: block;
+	}
+	/*导航图标的样式*/
+	.menu_wrap_icon img {
+		display: block;
+		width: 100%;
+	}
+	/*导航列表*/
+	.common_nav .menu {
+		width: 90%;
+		padding: 3% 5% 12%;
+		background: #fff url(../images/shouye-top.png) no-repeat top;
+		margin: 0 auto;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 999;
+	}
+	/*每一个导航样式*/
+	.common_nav .menu>li {
+		width: 100%;
+		float: none;
+		line-height: 60px;
+		border-bottom: 1px solid #ebebeb;
+	}
+	/*pad wap 导航下拉时 箭头变样式*/
+	.common_nav .menu .close {
+		width: 11px;
+		height: 18px;
+		background: url(../images/nav-close.png) no-repeat;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 21px 5% 0 0;
+	}
+	.common_nav .menu .open {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 18px;
+		height: 11px;
+		background: url(../images/nav-open.png) no-repeat;
+		margin: 25px 5% 0 0;
+	}
+	/*pc导航下的红条*/
+	.nav_redBg {
+		z-index: -1;
+	}
+	/*导航下的箭头*/
+	.common_nav .menu>li i {
+		z-index: -1;
+	}
+	/*每个导航的下拉*/
+	.common_nav .dropdown_menu {
+		position: static;
+	}
+	/*下拉菜单的每一个选项*/
+	.common_nav .dropdown_menu li {
+		width: 100%;
+		background: #de0011;
+		border-width: 0 0 1px 0;
+		line-height: 60px;
+	}
+	/*最后一个没有边框*/
+	.common_nav .dropdown_menu li:last-child {
+		border: none;
+	}
+}
+
+
+/*头部768以下（手机）*/
+
+@media screen and (max-width:767px) {
+	.common_center {
+		width: 90%;
+	}
+	/*悬浮窗口的位置*/
+	.kv-fixed {
+		display: none;
+	}
+	/*右上角的不可见*/
+	.top_right {
+		display: none;
+	}
+	/*导航栏的高度*/
+	.common_nav {
+		height: auto;
+		font-size: 10px;
+	}
+	/*logo大小*/
+	.common_nav .nav_logo {
+		width: 19%;
+	}
+	.common_nav .nav_logo img {
+		margin: 17.85% 0;
+	}
+	/*导航icon容器位置*/
+	.menu_wrap_icon {
+		width: 5.333%;
+		margin: 4% 5.333% 0 0;
+	}
+	.common_nav .menu>li {
+		line-height: 50px;
+	}
+	.common_nav .dropdown_menu li {
+		line-height: 40px;
+	}
+	/*导航的开关icon*/
+	.common_nav .menu .close {
+		width: 5px;
+		height: 9px;
+		background-size: 100% 100%;
+		margin-top: 20px;
+	}
+	.common_nav .menu .open {
+		width: 9px;
+		height: 5px;
+		background-size: 100% 100%;
+		margin-top: 22.5px;
+	}
+}
+
+
+/*----------------头部的media结束---------------------*/
+
+
+/*----------------top---------------------*/
+
+
+/* com > */
+
+select{
+	cursor: pointer;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.mx-width {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.mxo-width {
+	width: 1000px;
+	margin: auto;
+}
+
+.map-box {
+	overflow: hidden;
+}
+
+.overflow-hid {
+	overflow: hidden;
+}
+
+.floated-left {
+	float: left;
+}
+
+.floated-right {
+	float: right;
+}
+
+.select-img {
+	position: absolute;
+	width: 49px;
+	height: 48px;
+	right: 1px;
+	bottom: 1px;
+}
+
+#Identification {
+	display: none;
+}
+
+.wrapper {
+	width: 100%;
+	background: url(../images/index/kv-bg.jpg);
+}
+
+.content h2 {
+	text-align: center;
+	font-weight: normal;
+	margin-top: 5%;
+	padding-bottom: 2.5%;
+	margin-bottom: 2.5%;
+	font-size: 36px;
+	letter-spacing: 3px;
+}
+
+.mxo-width {
+	width: 1000px;
+	margin: auto;
+}
+
+.map-box {
+	overflow: hidden;
+}
+
+.overflow-hid {
+	overflow: hidden;
+}
+
+.position-re {
+	position: relative;
+}
+
+.position-ab {
+	position: absolute;
+}
+
+
+/* banner > */
+
+.banner .banner-pc .banner-img img {
+	width: 100%;
+	display: block;
+	z-index: 9;
+}
+
+.banner .floated p {
+	background: url(../images/link-back.png) repeat;
+	font-size: 45px;
+	text-align: right;
+	padding-right: 30px;
+	letter-spacing: 2px;
+	margin: 0px;
+}
+
+.banner .floated {
+	position: absolute;
+	height: 30%;
+	top: 30%;
+	width: 30%;
+	z-index: 100;
+	color: white;
+	line-height: 100px;
+}
+
+
+/* breadcrumb > */
+
+.breadcrumb {
+	width: 100%;
+	line-height: 80px;
+	background: url(../images/Distributor-search/nav-back.png) repeat;
+}
+.breadcrumb-nobg{
+	background: url(../images/breadcrumb-bottom-bg.png) center bottom no-repeat #fff;
+}
+.breadcrumb-nav a {
+	text-decoration: none;
+	color: white;
+}
+
+.nav-change a{
+	color: #666666;
+}
+.breadcrumb-nav {
+	letter-spacing: 3px;
+	font-size: 16px;
+	color: white;
+}
+.nav-change{
+	color: #666;
+
+}
+.breadcrumb-nav .active-now {
+	color: #FFC000;
+}
+.breadcrumb-nav .active-red{
+	color: #de0011;
+}
+@media screen and (max-width: 1100px) {
+	.banner .floated p {
+		font-size: 23px;
+		line-height: 70px;
+	}
+	.banner .floated {
+		width: 24%;
+	}
+	.content h2 {
+		width: 91%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.breadcrumb-nav {
+		width: 92%;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.breadcrumb-nav a {
+		font-size: 16px;
+	}
+	.breadcrumb {
+		line-height: 50px;
+	}
+	.banner .floated p {
+		font-size: 20px;
+		line-height: 60px;
+		padding-right: 20px;
+	}
+	.banner .floated {
+		width: 35%;
+	}
+	.breadcrumb-nav {
+		font-size: 16px;
+	}
+	.content h2 {
+		width: 89.3%;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.banner .floated p {
+		font-size: 18px;
+		line-height: 50px;
+		padding-right: 20px;
+	}
+	.banner .floated {
+		width: 37%;
+	}
+	.breadcrumb {
+		line-height: 50px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.banner .floated p {
+		font-size: 13px;
+	}
+}
+
+
+/*----------------top End---------------------*/
+
+
+/*footer.css*/
+
+
+/*-----------------footer背景图片开始---------------------*/
+
+.footer_fri_links img {
+	width: auto;
+}
+
+.footer_bg_wrap {
+	overflow: hidden;
+	background: url("../images/footer-car-bg.jpg") no-repeat;
+	background-size: 100% 100%;
+	padding: 3.84% 0;
+	position: relative;
+}
+
+
+/*两个一半的盒子*/
+
+.footer_bg_wrap .footer_bg_img_wrap {
+	width: 50%;
+}
+
+
+/*两张图片的大小*/
+
+.footer_bg_wrap .footer_bg_img_wrap img {
+	width: 25.473%;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+
+/*左图*/
+
+.footer_bg_left img {
+	margin-right: 5.263%;
+}
+
+
+/*右图*/
+
+.footer_bg_right img {
+	margin-left: 5.263%;
+}
+
+
+/*-----------------footer背景图片结束---------------------*/
+
+
+/*----------------------------江铃+福特link 开始-----------------------------*/
+
+.footer_cars_link {
+	padding: 35px 0;
+	overflow: hidden;
+	border-bottom: 4px solid #eb0000;
+	background: #fff;
+}
+
+
+/*对半的两边*/
+
+.cars_link_wrap {
+	width: 50%;
+}
+
+
+/*link的样式*/
+
+.footer_cars_link ul li {
+	float: left;
+	line-height: 1.14;
+	border-right: 1px solid #6e6e6e;
+}
+
+.footer_cars_link ul li a {
+	display: block;
+	padding: 0 14px;
+	color: #6d6e6e;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.footer_cars_link ul li a:hover {
+	color: #de0011;
+}
+
+
+/*福特无border*/
+
+.footer_cars_link .fute .no_borber {
+	border-right: 0;
+}
+
+
+/*----------------------------江铃+福特link 结束-----------------------------*/
+
+
+/*----------------------------友情链接开始-----------------------------*/
+
+
+/*背景颜色*/
+
+.footer_fri_links {
+	background: #222;
+	overflow: hidden;
+	padding: 40px 0 25px 0;
+}
+
+
+/*左半块的样式*/
+
+.footer_link_left {
+	width: 50%;
+	float: left;
+	line-height: 20px;
+}
+
+
+/*wap的首页样式*/
+
+.footer_link_left .shouye {
+	display: none;
+	position: relative;
+}
+
+.footer_link_left .shouye a {
+	display: block;
+	color: #fff;
+}
+
+
+/*每一小块的样式*/
+
+.footer_link_left .has_dropdown {
+	float: left;
+	width: 25%;
+	font-size: 18px;
+	color: #a4a4a4;
+	position: relative;
+}
+
+
+/*下拉菜单的样式*/
+
+.footer_link_left .dropdown_menu {
+	font-weight: normal;
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+.footer_link_left .dropdown_menu a {
+	color: #737373;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.footer_link_left .dropdown_menu a:hover {
+	color: #c4c4c4;
+}
+
+
+/*右半部分*/
+
+.footer_link_right {
+	width: 50%;
+	position: relative;
+}
+.erweima_box{
+	overflow: hidden;
+}
+
+/*底部logo*/
+
+.footer_link_right .bottom_logo {
+	/*width: 11%;*/
+}
+
+
+/*服务热线：*/
+#num_wap,.erweima_box_wap{
+	display: none;
+}
+#num_pc{
+	display: block;
+}
+.footer_link_right .fuwu_title {
+	margin-top: 5px;
+	color: #bcbcbc;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+/*二维码*/
+.footer_link_right .erweima{
+	color:#737373;
+	margin: 0 11% 0 0;
+}
+
+
+
+/*----------------------------友情链接结束-----------------------------*/
+
+
+
+/*----------------------------底部的版权开始-----------------------------*/
+
+.footer_bottom {
+	line-height: 60px;
+	background: #303031;
+	overflow: hidden;
+	font-size: 12px;
+	color: #999;
+	position: relative;
+}
+
+.footer_bottom p {
+	float: left;
+}
+
+.footer_bottom p a {
+	color: #999;
+}
+
+.footer_bottom .bottom_logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+/*回到顶部*/
+.toTop{
+	position: fixed;
+	bottom: 20%;
+	right: 3%;
+	background: url(../images/toTop_pc.png) no-repeat;
+	width: 50px;
+	height: 49px;
+	cursor: pointer;
+	z-index: 9999;
+	display: none;
+
+}
+.toTop:hover{
+	background: url(../images/toTop_pc_act.png) no-repeat;
+}
+
+/*----------------------------底部的版权结束-----------------------------*/
+
+
+/*-----------------------底部的媒体查询-----------------------*/
+
+
+/*底部的媒体查询 768-1000（平板）*/
+
+@media screen and (max-width:999px) {
+	/*底部的背景图*/
+	.footer_bg_wrap {
+		padding: 7.3% 0;
+		background: url("../images/footer-car-bg-pad.jpg") no-repeat;
+		background-size: 100% 100%;
+	}
+	/*两张图片*/
+	.footer_bg_wrap .footer_bg_img_wrap img {
+		width: 48.4%;
+	}
+
+}
+
+
+/*底部的媒体查询 768以下（手机）*/
+
+@media screen and (max-width:767px) {
+	/*底部的背景图*/
+	.footer_bg_wrap {
+		padding: 7.4% 0;
+		background: url("../images/footer-car-bg-pad.jpg") no-repeat;
+		background-size: 100% 100%;
+	}
+	/*两张图片*/
+	.footer_bg_wrap .footer_bg_img_wrap img {
+		width: 64.5%;
+	}
+	/*左图*/
+	.footer_bg_left img {
+		margin-right: 14.6%;
+	}
+	/*右图*/
+	.footer_bg_right img {
+		margin-left: 14.6%;
+	}
+	/*----------------------------江铃+福特link 开始-----------------------------*/
+	/*汽车链接*/
+	.footer_cars_link {
+		padding: 4.53% 0;
+	}
+	/*对半的两边*/
+	.cars_link_wrap {
+		width: 100%;
+	}
+	.cars_link_wrap ul {
+		float: none;
+		overflow: hidden;
+		width: 63%;
+		margin: 0 auto;
+	}
+	/*江铃无border*/
+	.footer_cars_link .jiangling .no_borber {
+		border-right: 0;
+	}
+	/*福特边距*/
+	.cars_link_wrap .fute {
+		margin-top: 2%;
+	}
+	.cars_link_wrap ul li {
+		width: 33%;
+		text-align: center;
+	}
+	.cars_link_wrap ul li a {
+		padding: 0;
+	}
+	/*----------------------------江铃+福特link 结束-----------------------------*/
+	/*----------------------------下方的导航 开始-----------------------------*/
+	.footer_fri_links .common_center {
+		width: 100%;
+	}
+	/*外边的盒子*/
+	.footer_fri_links {
+		padding: 0;
+	}
+	/*宽度100%*/
+	.footer_link_left,
+	.footer_link_right {
+		width: 100%;
+		text-align: center;
+		font-weight: normal;
+	}
+	/*left是左边导航*/
+	.footer_link_left .has_dropdown {
+		float: none;
+		width: 100%;
+		cursor: pointer;
+		font-size: 15px;
+		color: #fff;
+	}
+	.footer_link_left .shouye {
+		font-size: 15px;
+		line-height: 55px;
+		border-bottom: 1px solid #333;
+		display: block;
+	}
+	/*导航标题*/
+	.footer_link_left .drop_title {
+		line-height: 40px;
+		background: #58585a;
+	}
+	/*下拉菜单*/
+	.footer_link_left .dropdown_menu {
+		margin-top: 0;
+		line-height: 40px;
+		display: none;
+	}
+	.footer_link_left .dropdown_menu a {
+		background: #262626;
+		border-bottom: 1px solid #333;
+		font-size: 12px;
+		color: #bbb;
+	}
+	/*导航图标*/
+	.footer_fri_links .has_dropdown .close,
+	.footer_fri_links .shouye .close {
+		width: 14px;
+		height: 23px;
+		background: url(../images/footer-close.png) no-repeat;
+		margin: -12.5px 4.26% 0 0;
+		position: absolute;
+		top: 50%;
+		right: 0;
+	}
+	.footer_fri_links .has_dropdown .open {
+		width: 23px;
+		height: 14px;
+		background: url(../images/footer-open.png) no-repeat;
+		margin: 13px 4% 0 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	/*right是右边的服务热线*/
+	.footer_link_right {
+		padding: 4.66% 0;
+		background: #404040;
+	}
+	/*服务热线*/
+	#num_wap,.erweima_box_wap{
+		display: block;
+	}
+	#num_pc,.erweima_box{
+		display: none;
+	}
+	.footer_link_right .fuwu_title {
+		font-size: 12px;
+		line-height: .75;
+		margin-bottom: 5px;
+		color: #ffae00;
+	}
+	/*电话号码*/
+	.footer_link_right .num {
+		line-height: 1.2;
+		font-size: 10px;
+		color: #999;
+	}
+	/*二维码*/
+	.footer_link_right .erweima_box_wap img {
+		margin: 2.666% 10px 0 0;
+		float: none;
+	}
+	.footer_link_right .bottom_logo {
+		display: none;
+	}
+	/*----------------------------下方的导航 结束-----------------------------*/
+	/*----------------------------底部版权开始-----------------------------*/
+	.footer_bottom {
+		line-height: 1.33;
+		background: #000;
+		font-size: 9px;
+		color: #c0c0c0;
+		padding: 6% 0 5.6% 0;
+		margin-bottom:10px;
+	}
+	.footer_bottom .common_center {
+		width: 100%;
+	}
+	/*版权的logo*/
+	.footer_bottom .bottom_logo {
+		width: 7.466%;
+		display: block;
+		margin: 4.4% 0 0 5.33%;
+	}
+	.footer_bottom p {
+		float: none;
+		margin-left: 16%;
+	}
+	.footer_bottom p a {
+		color: #c0c0c0;
+	}
+	.toTop{
+		display: none;
+	}
+}
+	/*----------------------------通用属性-----------------------------*/
+	.fl{
+		float: left;
+	}
+	.fr{
+		float: right;
+	}
+	.over{
+		overflow: hidden;
+	}
+	.ab_fl{
+		position: absolute;
+	}
+	.re_fl{
+		position: relative;
+	}
+	.w-15{
+		width: 15%;
+	}
+	.w-20{
+		width: 20%;
+	}
+	.w-25{
+		width: 25%;
+	}
+	.w-27-5{
+		width: 27.5%;
+	}
+	.w-30{
+		width: 30%;
+	}
+	.w-35{
+		width: 35%;
+	}
+	.w-40{
+		width: 40%;
+	}
+	.w-47-5{
+		width: 47.5%;
+	}
+	.w-45{
+		width: 45%;
+	}
+	.w-50{
+		width: 50%;
+	}
+	.w-55{
+		width: 55%;
+	}
+	.w-60{
+		width: 60%;
+	}
+	.w-65{
+		width: 65%;
+	}
+	.w-70{
+		width: 70%;
+	}
+	.w-72-5{
+		width: 72.5%;
+	}
+	.w-75{
+		width: 75%;
+	}
+	.w-80{
+		width: 80%;
+	}
+	.w-85{
+		width: 85%;
+	}
+	.w-90{
+		width: 90%;
+	}
+	.w-95{
+		width: 95%;
+	}
+	.cu-cl{
+		cursor: pointer;
+	}
+	.mar-auto{
+		margin: auto;
+	}

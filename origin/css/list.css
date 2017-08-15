@@ -1,0 +1,144 @@
+	/*body*/
+	body,html{
+		margin: 0px;
+		padding: 0px;
+		min-width: 1000px;
+	}
+	img{
+		border: 0px;
+		display: block;
+	}
+	/*content*/
+	.content{
+		overflow: hidden;
+		background: url('../images/back.jpg') no-repeat 100% 0%;
+		background-size:100%;
+	}
+
+	/*theme*/
+	.theme-title{
+		margin-top: 28%; 
+	}
+
+	/*message*/
+	.information-list{
+		/*background: white;*/
+	}
+	.information-list li{
+		position: relative;
+		overflow: hidden;
+		margin-top: 3%;
+		box-shadow: 0 0 15px 0px #c7c7c7;
+		background: white;
+	}
+	.information-list li img{
+		position: relative;
+		z-index: 999;
+	}
+	.information-list li div{
+		overflow: hidden;
+	}
+	.information-list .w-72-5{
+		margin-top: 2%;
+		position: relative;
+		z-index: 999;
+	}
+	.information-list .w-72-5 h3,
+	.information-list .w-72-5 .small,
+	.information-list .w-72-5 .copy{
+		width: 92%;
+		margin-left: 4%;
+		line-height: 25px;
+		color: #afa7a7;
+		transition: all 1.8s;
+		letter-spacing: .1em;
+	}
+	.information-list .w-72-5 h3{
+		color:black;
+	}
+	.information-list .hover-shadow{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		margin-top: 195px;
+		transition: all 1s;
+		box-shadow: 0px 0px 20px 0px #8a8181;
+		width: 100%;
+		border-radius: 5px;
+	}
+	.information-list li:hover .hover-shadow{
+		margin-top: -20px;
+	}
+	.information-list li:hover h3,
+	.information-list li:hover .small,
+	.information-list li:hover .copy{
+		color: white;
+	}
+	.information-list li .detail{
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		z-index: 999;
+		margin-bottom: -40px;
+		transition: all .5s;
+		transition-delay: .41s;
+	}
+	.information-list li .detail .see{
+		line-height: 40px;
+		width: 80px;
+		text-align: center;
+		background: #de0011;
+		color: white;
+		cursor: pointer;
+		letter-spacing: .15em;
+		font-size: 13px;
+	}
+	.information-list li .detail img{
+		width: 40px;
+	}
+	.information-list li:hover .detail{
+		margin-bottom: 0px;
+	}
+	/*filp*/
+	.filp{
+		text-align: center;
+		margin-top: 60px;
+	}
+	.filp ul{
+		overflow: hidden;
+		display: inline-block;
+	}
+	.filp ul li{
+		float: left;
+		overflow: hidden;
+	}
+	.filp ul li div{
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		float: left;
+		overflow: hidden;
+		border: 1px solid black;
+		box-sizing: border-box;
+		cursor: pointer;
+		transition: all .6s;
+	}
+	.filp ul li .left{
+		margin: 0px 6px 0px 16px;
+	}
+	.filp ul li .right{
+		margin: 0px 16px 0px 6px;
+	}
+	.filp ul li .light{
+		background: red;
+		color: white;
+		border: 1px solid white;
+	}
+	.filp ul li div:hover{
+		background: red;
+		color: white;
+		border: 1px solid white;
+		border-radius: 4px;
+	}
+
+

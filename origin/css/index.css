@@ -1,0 +1,289 @@
+	/*body*/
+	body,html{
+		margin: 0px;
+		padding: 0px;
+		min-width: 1000px;
+	}
+	/*content*/
+	.content{
+		overflow: hidden;
+		background: url('../images/back.jpg') no-repeat 100% 0%;
+		background-size:100%;
+	}
+	/*user*/
+	.user{
+	    margin-top: 25%;
+	}
+	.user h2 img{
+		width:60%;
+		margin: auto;
+	}
+	.user .user-right{
+		width: 50%;
+	}
+	.user .user-left{
+		width: 50%;
+	}
+	.user .this-week{
+		width: 90%;
+	}
+	.user .information{
+		width: 90%;
+		margin: auto;
+	}
+	.user .information input{
+		width: 100%;
+		background: white;
+		height: 50px;
+		line-height: 50px;
+		text-indent: 1em;
+		border: 1px solid #c6c6c6;
+		margin-bottom: 18px;
+	}
+	.user .information select{
+		width: 100%;
+		background: white;
+		height: 50px;
+		line-height: 50px;
+		text-indent: 1em;
+		border: 1px solid #c6c6c6;
+		margin-bottom: 18px;
+	}
+	.user .information label{
+		line-height: 50px;
+		margin-left: 5%;
+	}
+	/*toSwiper*/
+	.toSwiper{
+		margin-top: 3%;    
+	}
+	.toSwiper-title{
+		width: 32.5%;
+		margin: 0px auto;
+	}
+	.toSwiper .date{
+		top: 48%;
+		right: 100px;
+		background: #e5e5e5;
+		padding:0px 8px;
+		line-height: 30px;
+	}
+	.toSwiper .click-swiper{
+		position: absolute;
+		width: 100%;
+		height: 1px;
+	}
+	.toSwiper .click-swiper img{
+		width: 35px;
+		cursor: pointer;
+	}
+	.toSwiper .click-swiper .right{
+		float: right;
+		margin-right: 5%;
+		background: #d1d1d1;
+		transition: all .6s;
+	}
+	.toSwiper .click-swiper .left{
+		float: left;
+		margin-left: 5%;
+		background: #d1d1d1;
+		transition: all .6s;
+	}
+	.toSwiper .click-swiper .left:hover{
+		background: red;
+		opacity: .8
+	}
+	.toSwiper .click-swiper .right:hover{
+		background: red;
+		opacity: .8
+	}
+	.toSwiper .more{
+		top: 48%;
+		right: 30px;
+		background: #e5e5e5;
+		padding:0px 8px;
+		line-height: 30px;
+	}
+	.toSwiper .date select{
+		width: 40px;
+	}
+	.toSwiper .toSwiper-top{
+		margin-top: 30px;
+	}
+	.toSwiper .to-line{
+		height: 1px;
+		background: black;
+		position: absolute;
+		top: 18%;
+		left: 10%;
+		width: 80%;
+	}
+	.toSwiper h3{
+		text-align: center;
+	    transition: all 1.5s;
+	    width: 70%;
+	    margin: 12px auto;
+	    background: black;
+		color: white;
+	}
+	.toSwiper p{
+		text-align: center;
+		width: 80%;
+		margin: 0px auto;
+	}
+	.toSwiper .box-tr{
+	    transform: rotate(0deg);
+	    width: 18px;
+	    height: 18px;
+	    background: black;
+	    margin: auto;
+	    margin-top: 15px;
+	    margin-bottom: 15px;
+	    border-radius: 100px;
+	    transition: all .8s;
+	    box-shadow: 0 0 10px 3px #756c6c;
+	}
+	.toSwiper .swiper-slide div:hover h3{
+		background: red;
+		color: white;
+		border-radius: 6px;
+	}
+	.toSwiper .swiper-slide div:hover .box-tr{
+	    transform: rotate(45deg);
+	    border-radius: 1px;
+		background: red;
+	    box-shadow: 0px 0px 22px 6px #b1abab;
+	}
+	.toSwiper .light div h3{
+		background: red;
+		color: white;
+		border-radius: 6px;
+	}
+	.toSwiper .light div .box-tr{
+		transform: rotate(45deg);
+	    border-radius: 1px;
+		background: red;
+	    box-shadow: 0px 0px 22px 6px #a59898;
+	}
+	/*.toSwiper-top .time-line{
+		width: 80%;
+	}*/
+	/*toSwiper-bom*/
+	.toSwiper-bom{
+		margin-top: 5%;
+		background: #edf4fb;
+	}
+	.toSwiper-bom .copy{
+		margin-top: 4%;
+		text-indent: 3em;
+	}
+	.toSwiper-bom .copy h4{
+		line-height: 60px;
+		font-size: 18px;
+		letter-spacing: .2em;
+	}
+	.toSwiper-bom .copy li{
+		line-height: 25px;
+		letter-spacing: .1em;
+		color: #a5aaaf;
+		font-size: 15px;
+	}
+	/*show*/
+	.show{
+		background: url('../images/back-1.jpg') no-repeat 100% 0%;
+		margin-top: 70px;
+	}
+	.show h4{
+		color: white;
+		text-indent: 1em;
+		border-left: 3px solid white;
+		line-height: 14px;
+		margin: 28px 0px;
+		font-size: 16px;
+	}
+	.show .h4-black{
+		color: black;
+		border-left:  3px solid black;
+	}
+	.show .swiper-slide img{
+		width: 90%;
+		margin: auto;
+	}
+	.show .show-title{
+		margin-top: 26px;
+		margin-bottom: 26px;
+	}
+	.show .pagin{
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		z-index: 99;
+	}
+	.click-swiper-ago{
+		top: 30%;
+	}
+	.click-swiper-owner{
+		top: 45%;
+	}
+	.click-swiper-gilrs{
+		top: 48%;
+	}
+	.show .pagin img{
+		width: 40px;
+		background: #d1d1d1;
+		transition: all .7s;
+	}
+	.show .pagin img:hover{
+		background: red;
+		cursor: pointer;
+	}
+	.show .pagin .right{
+		float: right;
+		margin-right: 1.25%;
+	}
+
+	.show .pagin .left{
+		float: left;
+		margin-left: 1.25%;
+	}
+
+	/* Demo Syles */
+	.device .arrow-left {
+		background: url(img/arrows.png) no-repeat left top;
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		margin-top: -15px;
+		width: 17px;
+		height: 30px;
+	}
+	.device .arrow-right {
+		background: url(img/arrows.png) no-repeat left bottom;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		margin-top: -15px;
+		width: 17px;
+		height: 30px;
+	}
+	.week-pagination {
+		position: absolute;
+		left: 0;
+		text-align: center;
+		bottom: 16%;
+		width: 100%;
+		z-index: 999;
+	}
+	.swiper-pagination-switch {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 15px;
+		background: #fff;
+		box-shadow: 0px 1px 2px #555 inset;
+		margin: 0 8px;
+		cursor: pointer;
+	}
+	.swiper-active-switch {
+		background: red;
+	}
