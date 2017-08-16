@@ -1,0 +1,64 @@
+	/*body*/
+	body,html{
+		margin: 0px;
+		padding: 0px;
+		min-width: 1000px;
+	}
+	img{
+		border: 0px;
+		display: block;
+	}
+	
+	/*content*/
+	.content{
+		overflow: hidden;
+		background: url('../images/back.jpg') no-repeat 100% 0%;
+		background-size:100%;
+	}
+	/*core*/
+	.core{
+		background: white;
+	}
+	.core div{
+		width: 50%;
+		overflow: hidden;
+		background: white;
+	}
+	.core img{
+		width: 95%;
+		position: relative;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		margin: 20px auto;
+	}
+	.core .right{
+		padding-top: 5%;
+	}
+	/*theme*/
+	.theme-title{
+		margin-top: 28%; 
+	}
+
+	/*lamp*/
+	.lamp-box{
+		margin-top: 4%;
+		margin-bottom: 4%;
+		overflow: hidden;
+	}
+	.lamp-box img{
+		width: 23%;
+		float: left;
+		margin: 1% 1% 0px;
+		cursor: pointer;
+	}
+	/**/
+	.lamp-box h4{
+		color: black;
+		text-indent: 1em;
+		border-left: 3px solid black;
+		line-height: 14px;
+		margin: 28px 0px;
+		font-size: 16px;
+	}
