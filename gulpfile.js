@@ -12,6 +12,7 @@ var gulp    = require('gulp'),
     tinylr = require('tiny-lr'),               
     server = tinylr(),
     obfuscate = require('gulp-obfuscate'),
+    obfuscate = require('gulp-obfuscate'),
     port = 8188,
     // 启动热刷新
     connect = require('gulp-connect');
@@ -336,6 +337,12 @@ var gulp    = require('gulp'),
             .pipe(htmlmin(options))
             .pipe(gulp.dest(htmlDst))
     });
+    // 不能用 ugJs
+    gulp.task('ugjs', function () {
+        return gulp.src('./program/script/*.js')
+            .pipe(obfuscate())
+            .pipe(gulp.dest('./program/script/'));
+    });
     gulp.task('css', function () {
         var cssSrc = './origin/css/*.css',
             cssDst = './program/css';
@@ -359,12 +366,13 @@ var gulp    = require('gulp'),
             // .pipe(rename({ suffix: '.min' }))
             // .pipe(obfuscate());
             .pipe(uglify().on('error', function(err){
-                gutil.log(`return an error ----------- > ${err}`);
+                console.log(`return an error X ----------- > ${err}`);
                 this.emit('end');
             }))
             .pipe(gulp.dest(jsDst));
                 
     });
+
     // 清空program
     gulp.task('clean', function() {
         gulp.src(['./program/css', './program/script', './program/images'], {read: false})

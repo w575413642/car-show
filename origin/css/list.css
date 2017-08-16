@@ -50,7 +50,7 @@
 		margin-left: 4%;
 		line-height: 25px;
 		color: #afa7a7;
-		transition: all 1.8s;
+		transition: all 1.8s ease;
 		letter-spacing: .1em;
 	}
 	.information-list .w-72-5 h3{
@@ -61,10 +61,10 @@
 		top: 0px;
 		left: 0px;
 		margin-top: 195px;
-		transition: all 1s;
+		transition: all .8s ease;
 		box-shadow: 0px 0px 20px 0px #8a8181;
 		width: 100%;
-		border-radius: 5px;
+		border-radius: 4px;
 	}
 	.information-list li:hover .hover-shadow{
 		margin-top: -20px;
@@ -80,8 +80,9 @@
 		bottom: 0px;
 		z-index: 999;
 		margin-bottom: -40px;
-		transition: all .5s;
-		transition-delay: .41s;
+		transition: all .4s ease;
+		transition-delay: .3s;
+		border-radius: 1px 5px 1px 1px;
 	}
 	.information-list li .detail .see{
 		line-height: 40px;
@@ -121,7 +122,7 @@
 		border: 1px solid black;
 		box-sizing: border-box;
 		cursor: pointer;
-		transition: all .6s;
+		transition: all .6s ease;
 	}
 	.filp ul li .left{
 		margin: 0px 6px 0px 16px;
@@ -132,6 +133,7 @@
 	.filp ul li .light{
 		background: red;
 		color: white;
+		border-radius: 5px; 
 		border: 1px solid white;
 	}
 	.filp ul li div:hover{

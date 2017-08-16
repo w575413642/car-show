@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".lamp-box img").click(function(){$(".layer").fadeIn(),$(".layer .layer-model .model-img").attr("src",$(this).attr("src"))}),$(".layer .layer-model .close").click(function(){$(".layer").fadeOut()})});
