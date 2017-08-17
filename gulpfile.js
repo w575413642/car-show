@@ -13,7 +13,7 @@ var gulp    = require('gulp'),
     server = tinylr(),
     obfuscate = require('gulp-obfuscate'),
     obfuscate = require('gulp-obfuscate'),
-    port = 8188,
+    port = 8288,
     // 启动热刷新
     connect = require('gulp-connect');
      
@@ -335,8 +335,9 @@ var gulp    = require('gulp'),
             htmlDst = './program/';
             gulp.src(htmlSrc)
             .pipe(htmlmin(options))
-            .pipe(gulp.dest(htmlDst))
+            .pipe(gulp.dest(htmlDst));
     });
+
     // 不能用 ugJs
     gulp.task('ugjs', function () {
         return gulp.src('./program/script/*.js')
@@ -357,32 +358,60 @@ var gulp    = require('gulp'),
             // .pipe(imagemin())
             .pipe(gulp.dest(imgDst));
     })
-    gulp.task('js', function () {
-        var jsSrc = './origin/script/*.js',
-            jsDst ='./program/script';
-            gulp.src(jsSrc)
-            // .pipe(concat('index.js'))
-            // .pipe(gulp.dest(jsDst))
-            // .pipe(rename({ suffix: '.min' }))
-            // .pipe(obfuscate());
-            .pipe(uglify().on('error', function(err){
-                console.log(`return an error X ----------- > ${err}`);
-                this.emit('end');
-            }))
-            .pipe(gulp.dest(jsDst));
-                
-    });
+    function classIfication(Or){
+        gulp.task('js', function () {
+            var jsSrc = './origin/script/*.js',
+                jsDst ='./program/script',
+                ohter = ['./origin/script/jquery-1.10.1.min.js','./origin/script/laydate.js']
+                gulp.src(jsSrc)
+                // .pipe(concat('index.js'))
+                // .pipe(gulp.dest(jsDst))
+                // .pipe(rename({ suffix: '.min' }))
+                // .pipe(obfuscate());
+                .pipe(uglify().on('error', function(err){
+                    console.log(`return an error X ---- > ${err}`);
+                    this.emit('end');
+                }))
+                .pipe(gulp.dest(jsDst));
+                if(Or){return;}
+                other(ohter,jsDst);
+        });
+        // run-js
+        gulp.start('js');
+    }
 
+    function other(jQ_other,jQ_target){
+        var num = 0;
+             gulp.src('./origin/**/*.*').on('data',function(file){
+                console.log(file)
+                console.log('look changes file ---->')
+                console.log(file.history[0])
+                num++;
+             });
+       setTimeout(function(){
+         console.log(`In the final, the step setting unable uglify file`)
+         console.log(`  ----> address ----> ${jQ_other}`)
+         console.log(`  ----> changes file ----> ${num}`)
+        gulp.src(jQ_other).pipe(gulp.dest(jQ_target))
+    },5000)
+    };
     // 清空program
     gulp.task('clean', function() {
         gulp.src(['./program/css', './program/script', './program/images'], {read: false})
             .pipe(clean());
     });
-
-    // 清除重构
+     // 清除重构
     gulp.task('default',function(){
+        console.log(gulp)
         gulp.start('html');
-        gulp.start('js');
+        classIfication(true);
+        gulp.start('css');
+        gulp.start('images');
+    });
+    // 清除重构
+    gulp.task('LastDefault',function(){
+        gulp.start('html');
+        classIfication(false)
         gulp.start('css');
         gulp.start('images');
     });
@@ -406,7 +435,7 @@ var gulp    = require('gulp'),
             });
 
             gulp.watch('./origin/script/*.js', function(){
-                gulp.run('js');
+                classIfication(true);
             });
             // 只复制不压缩
             gulp.watch('./origin/images/**/*.{png,jpg,gif}', function(){

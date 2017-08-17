@@ -1,0 +1,7 @@
+http://test2.cloud-top.com.cn/1708_jlcz/program/ 
+
+model ----> program/model.html
+
+list      ----> program/list.html
+
+detail  ----> program/detail.html

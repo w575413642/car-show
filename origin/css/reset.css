@@ -4,7 +4,7 @@ img{border:none;width: 100%;}
 ul,ol,li{list-style:none;}
 input,select,textarea{outline:none;border:none;background:none;}
 textarea{resize:none;}
-a{text-decoration:none;color: #000}
+a{text-decoration:none;color: #fff}
 /*选择*/
 ::selection {background-color:#669900; color:#ffffff; text-shadow:none;}
 ::-moz-selection {background-color:#669900; color:#ffffff;text-shadow:none;}
