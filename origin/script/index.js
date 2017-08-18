@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var mouse;
 	// now them
 	var mySwiper = new Swiper('.this-week',{
 		pagination: '.week-pagination',
@@ -8,15 +9,14 @@ $(document).ready(function(){
 	})
 	// time line
 	var timeLine = new Swiper('.time-line',{
-		slidesPerView : 6,
+		slidesPerView : 1,
 		calculateHeight : true,
 		paginationClickable: true,
 		onSlideTouch:function() {
-			$('.time-line .swiper-slide').removeClass('light'); 
-			$(timeLine.clickedSlide).addClass('light');
-			imgCopy.swipeTo($(timeLine.clickedSlide).index(), 1000, false);
-			timeLine.swipeTo($(timeLine.clickedSlide).index(), 1000, false);
-			changeLight()
+		},
+		onSlideChangeEnd: function(){
+			changeLight();
+			timeSelect();
 		}
 
 	})
@@ -25,12 +25,35 @@ $(document).ready(function(){
 		slidesPerView : 1,
 		calculateHeight : true,
 		paginationClickable: true,
+		onlyExternal:true,
 		onSlideChangeEnd: function(){
 			console.log(imgCopy.activeIndex);
 			$('.time-line .swiper-slide').removeClass('light'); 
 			$('.time-line .swiper-slide').eq(imgCopy.activeIndex).addClass('light');
 		}
 	})
+	// mousedown listen
+	$('.time-box').mousedown(function(e){
+		var e = window.event || e;
+			return mouse = {
+					seX:e.screenX,
+					seY:e.screenY,
+					click:function(_target){
+						$('.time-box').removeClass('light');
+						_target.addClass('light');
+						imgCopy.swipeTo(parseInt(_target.attr('rel')), 1000, false);
+					},
+					tips:function(){
+						console.log('move')
+					}
+			}
+	});
+	// mouseup
+	$('.time-box').mouseup(function(e){
+		var e = window.event || e,
+		_this = $(this);
+		(mouse.seX == e.screenX && mouse.seY == e.screenY) ? mouse.click(_this) : mouse.tips();
+	});
 	// ago show
 	var agoSwiper = new Swiper('.ago-swiper',{
 		slidesPerView : 4,
@@ -79,15 +102,27 @@ $(document).ready(function(){
     	changeLight()
     	e.preventDefault()
     	timeLine.swipeNext()
-		imgCopy.swipeTo(timeLine.activeIndex, 1000, false);
+    	timeSelect()
   	});
   	$('.click-swiper .left').on('click', function(e){
     	changeLight()
     	e.preventDefault()
     	timeLine.swipePrev()
-		imgCopy.swipeTo(timeLine.activeIndex, 1000, false);
+    	timeSelect()
   	});
+  	// change timeSelect
+  	function timeSelect(){
+  		$('#data').get(0).selectedIndex = $('.time-line .swiper-slide-active').attr('rel');
+  	}
+  	/* ====> Dynamic change 1 
+  	   循环日期 */
 
+  	$('#data').change(function(){
+  		timeLine.swipeTo(parseInt($(this).val()), 1000, false);
+  		changeLight();
+  	})
+
+  	/* <==== */
   	// siblings changes -input
   	$('.slec-box input').blur(function(){
   		setTimeout(function(){
@@ -142,7 +177,10 @@ $(document).ready(function(){
   	});
   	// change light
   	function changeLight(){
-  		$('.time-line .swiper-slide').removeClass('light')
-  		$('.time-line .swiper-slide-active').addClass('light')
+  		setTimeout(function(){
+		$('.time-box').removeClass('light')
+  		$('.time-line .swiper-slide-active .time-box').eq(0).addClass('light')
+		imgCopy.swipeTo(parseInt($('.time-line .swiper-slide-active .time-box').eq(0).attr('rel')), 1000, false);
+  		},500)
   	}
 });

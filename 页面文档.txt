@@ -5,3 +5,29 @@ model ----> program/model.html
 list      ----> program/list.html
 
 detail  ----> program/detail.html
+
+Dynamic change 
+
+	（1） ---->
+	
+		Dynamic change 1 : 循环日期 	<option value="1">2017年7月</option>  
+			
+			Value => 时间轴月份跳转值 数值为时间节点跳跃范围
+
+	（2） ---->
+	
+		Dynamic change 2 : 循环时间轴 	<div class="swiper-slide" rel="1"></div>
+		
+				Rel => 与循环日期索引对应
+		
+	（3） ---->
+	
+		Dynamic change 3 : 循环时间轴节点 	<div class="time-box" rel="0"><div class="box-tr"></div><h3>07.15-25</h3><p>第18届长沙展示测试测试测试测试测试测试</p></div>
+
+				Rel => 循环节点 起始点为0需要对应展开内容
+		
+	（4） ---->
+	
+		Dynamic change 4 : 循环时间点 	<div class="time-box" rel="0"><div class="box-tr"></div><h3>07.15-25</h3><p>第18届长沙展示测试测试测试测试测试测试</p></div>
+
+				Rel => 循环节点 起始点为 0 -- +∞ 需要对应展开内容
