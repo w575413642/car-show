@@ -1,4 +1,4 @@
-http://test2.cloud-top.com.cn/1708_jlcz/program/ 
+﻿http://test2.cloud-top.com.cn/1708_jlcz/program/ 
 
 model ----> program/model.html
 
@@ -30,4 +30,4 @@ Dynamic change
 	
 		Dynamic change 4 : 循环时间点 	<div class="time-box" rel="0"><div class="box-tr"></div><h3>07.15-25</h3><p>第18届长沙展示测试测试测试测试测试测试</p></div>
 
-				Rel => 循环节点 起始点为 0 -- +∞ 需要对应展开内容
+				Rel => 循环节点 起始点为 0 -- +∞ 需要对应展开内容 
