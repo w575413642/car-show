@@ -331,7 +331,7 @@ var gulp    = require('gulp'),
                 minifyJS: true,//压缩页面JS
                 minifyCSS: true//压缩页面CSS
             },
-            htmlSrc = './origin/*.html',
+            htmlSrc = ['./origin/*.html','./origin/footer/*.html'],
             htmlDst = './program/';
             gulp.src(htmlSrc)
             .pipe(htmlmin(options))
@@ -345,14 +345,14 @@ var gulp    = require('gulp'),
             .pipe(gulp.dest('./program/script/'));
     });
     gulp.task('css', function () {
-        var cssSrc = './origin/css/*.css',
+        var cssSrc = ['./origin/css/*.css','./origin/footer/css/*.css'],
             cssDst = './program/css';
             gulp.src(cssSrc)
             .pipe(minifycss())
             .pipe(gulp.dest(cssDst));
     });
     gulp.task('images', function(){
-        var imgSrc = ['./origin/images/*','./origin/images/**/*'],
+        var imgSrc = ['./origin/images/*','./origin/images/**/*','./origin/footer/images/**/*'],
             imgDst = './program/images';
             gulp.src(imgSrc)
             // .pipe(imagemin())
@@ -360,7 +360,7 @@ var gulp    = require('gulp'),
     })
     function classIfication(Or){
         gulp.task('js', function () {
-            var jsSrc = './origin/script/*.js',
+            var jsSrc = ['./origin/script/*.js','./origin/footer/script/*.js'],
                 jsDst ='./program/script',
                 ohter = ['./origin/script/jquery-1.10.1.min.js','./origin/script/laydate.js']
                 gulp.src(jsSrc)
@@ -402,7 +402,7 @@ var gulp    = require('gulp'),
     });
      // 清除重构
     gulp.task('default',function(){
-        console.log(gulp)
+        // console.log(gulp)
         gulp.start('html');
         classIfication(true);
         gulp.start('css');
@@ -438,7 +438,7 @@ var gulp    = require('gulp'),
                 classIfication(true);
             });
             // 只复制不压缩
-            gulp.watch('./origin/images/**/*.{png,jpg,gif}', function(){
+            gulp.watch(['./origin/images/**/*.{png,jpg,gif}','./origin/images/*.{png,jpg,gif}'], function(){
                 gulp.run('images');
             });
             gulp.watch('./origin/images/*', function(){

@@ -1,0 +1,116 @@
+
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<div class="about">
+		    <div class="about_top clear">
+		        <div class="item">
+		            <p>车型总览</p>
+		            <ul class="clear">
+		                <li><a href="http://everest.jmc.com.cn" target="_blank">福特撼路者</a></li>
+		                <li><a href="http://transit.jmc.com.cn" target="_blank">福特全顺</a> </li>
+		                <li><a href="http://tourneo.jmc.com.cn" target="_blank">福特途睿欧</a> </li>
+		                <li><a href="http://suv.jmc.com.cn" target="_blank">江铃驭胜</a> </li>
+		                <li><a href="http://lighttruck.jmc.com.cn" target="_blank">江铃轻卡</a> </li>
+		                <li><a href="http://pickup.jmc.com.cn" target="_blank">江铃皮卡</a> </li>
+		                <li><a href="http://heavytruck.jmc.com.cn" target="_blank">江铃重卡</a> </li>
+		                <li><a href="http://lightbus.jmc.com.cn/index.shtml" target="_blank">江铃特顺</a> </li>
+		            </ul>
+		        </div>
+		        <div class="item">
+		            <p>购车指南</p>
+		            <ul class="clear">
+		                <li><a href="http://suv.jmc.com.cn/drive_dir_drive.shtml" target="_blank">预约试驾</a></li>
+		                <li><a href="http://suv.jmc.com.cn/drive_dir_search.shtml" target="_blank">经销商查询</a></li>
+		                <li><a href="http://suv.jmc.com.cn/drive_dir_order.shtml" target="_blank">在线购车</a></li>
+		            </ul>
+		        </div>
+		        
+		        <div class="item">
+		            <p>车主服务</p>
+		            <ul class="clear">
+		                <li><a href="http://www.jmc.com.cn/pages/jmccares.html" target="_blank">江铃服务</a></li>
+		                <li><a href="http://suv.jmc.com.cn/service_dir_search.shtml" target="_blank">服务站查询</a></li>
+		            </ul>
+		        </div>
+		        <div class="item">
+		            <p>经销商</p>           
+		             <ul class="clear">
+		                <li><a href="http://www.jmc.com.cn/pages/dealer_recruit.html" target="_blank">经销商招募</a></li>
+		            </ul>
+		        </div>
+		        <div class="item item4">
+		            <p class="noarrow">服务热线</p>
+		            <ul class="clear minishow">
+		                <li><strong>400-880-1099</strong></li>
+		                <li><strong>800-869-1099</strong></li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="about_bot">
+		        <ul class="bot_left">
+		            <li><a href="http://www.jmc.com.cn/summary.html" target="_blank">企业概况</a> </li>
+		            <li><a href="http://www.jmc.com.cn/categories/52" target="_blank">投资者关系</a> </li>
+		            <li><a href="http://www.jmc.com.cn/contents/list/18" target="_blank">企业动态</a> </li>
+		            <li><a href="http://www.jmc.com.cn/contents/list/37" target="_blank">企业公益</a> </li>
+		            <li><a href="http://www.jmc.com.cn/contents/1482" target="_blank">法律声明</a> </li>
+		            <li><a href="http://jmc.zhiye.com/home" target="_blank">招贤纳士</a> </li>
+		        </ul>
+		        <ul class="bot_right">
+		            <li>
+		                <span class="wechat">官方微信</span>
+		                <div class="overshow">
+		                    <div><img src="images/weixin_qrcode.gif"></div>
+		                    <abbr></abbr>
+		                </div>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+		<div class="footer">
+		    <div class="foot_left">
+		        <p>&copy; Copyright 2017 JIANGLING MOTORS CO.,LTD.All right reserverd</p>
+		        <p>江铃汽车股份有限公司　赣ICP备 13003244</p>
+		    </div>
+		    <div class="foot_right">
+		        <a href="javascript:;"><img src="images/foot03.png"></a>
+		        <a href="javascript:;"><img src="images/foot02.png"></a>
+		        <a href="javascript:;"><img src="images/foot01.png"></a>
+		    </div>
+		</div>
+		
+		<script type="text/javascript">
+                var mq;
+                var isMinStage=false;
+                $(function(){ 
+                    mq=window.matchMedia("(max-width:1100px)");
+                    mq.addListener(function(changed) {
+                        changeSize640(changed.matches);
+                    });
+                    changeSize640(mq.matches);
+                    $('.about_top .item').each(function(index, element) {
+                        $($(element).find('p')[0]).click(function(e) {
+                            if(isMinStage){
+                                var _ul=$($(this).parent().find('ul')[0]);
+								if(!_ul.hasClass('minishow')){
+									_ul.slideToggle('fast');
+								}
+                            }
+                        });
+                    });
+                });
+                function changeSize640(b){
+                    isMinStage=b;
+                    if(b){
+                        $('.about_top .item').each(function(index, element) {
+                            var _ul=$($(element).find('ul')[0]);
+							if(!_ul.hasClass('minishow')){
+								_ul.hide();
+							}
+                        });
+                    }else{
+                        $('.about_top .item').each(function(index, element) {
+                            $($(element).find('ul')[0]).show();
+                        });
+                    }
+                }
+		</script>
+

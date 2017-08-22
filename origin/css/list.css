@@ -48,9 +48,13 @@
 	.information-list .w-72-5 .copy{
 		width: 92%;
 		margin-left: 4%;
-		line-height: 25px;
+		line-height: 23px;
 		color: #afa7a7;
 		transition: all 1.8s ease;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
 		letter-spacing: .1em;
 	}
 	.information-list .w-72-5 h3{

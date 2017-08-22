@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	var mouse;
+  
 	// now them
 	var mySwiper = new Swiper('.this-week',{
 		pagination: '.week-pagination',
@@ -18,7 +19,6 @@ $(document).ready(function(){
 			changeLight();
 			timeSelect();
 		}
-
 	})
 	// img copy
 	var imgCopy = new Swiper('.img-copy',{
@@ -47,15 +47,36 @@ $(document).ready(function(){
 						console.log('move')
 					}
 			}
-	});
+	});   
 	// mouseup
 	$('.time-box').mouseup(function(e){
 		var e = window.event || e,
 		_this = $(this);
 		(mouse.seX == e.screenX && mouse.seY == e.screenY) ? mouse.click(_this) : mouse.tips();
 	});
+  // 
+  // and listen
+  $('.the-owner img,.ago img,.gilrs-swiper img').mousedown(function(e){
+    $('.layer').fadeIn()
+    var status = parseInt($(this).parent().parent().attr('rel'));
+    switch(status){
+      case 1:
+      $('.layer .layer-model').width('644px')
+      $('.layer .layer-model').height('400px')
+      break;
+      case 2:
+      $('.layer .layer-model').height('600px')
+      $('.layer .layer-model').width('475px')
+      break;
+      case 3:
+      $('.layer .layer-model').width('644px')
+      $('.layer .layer-model').height('400px')
+      break;
+    }
+    $('.layer-model .model-img').attr('src',$(this).attr('src'))
+  })
 	// ago show
-	var agoSwiper = new Swiper('.ago-swiper',{
+	window.agoSwiper = new Swiper('.ago-swiper',{
 		slidesPerView : 4,
 		calculateHeight : true,
 		paginationClickable: true
@@ -156,25 +177,12 @@ $(document).ready(function(){
   	});
   	// nav scroll
   	$('.menu li').on('click', function(){
-  		switch(parseInt($(this).index())){
-  			case 1:
-  			$('html,body').animate({scrollTop: $(".toSwiper").offset().top}, 800);
-  			break;
-  			case 2:
-  			$('html,body').animate({scrollTop: $(".show").offset().top}, 800);
-  			break;
-  			case 3:
-  			$('html,body').animate({scrollTop: $(".show-gilrs").offset().top}, 800);
-  			break;
-  			case 4:
-  			$('html,body').animate({scrollTop: $(".the-owner").offset().top}, 800);
-  			break;
-  			case 5:
-  			$('html,body').animate({scrollTop: $(".customer").offset().top}, 800);
-  			break;
-
-  		}
+      navTo(parseInt($(this).index()))
   	});
+    // close
+    $('.close').click(function(){
+        $('.layer').fadeOut()
+    });
   	// change light
   	function changeLight(){
   		setTimeout(function(){
@@ -183,4 +191,34 @@ $(document).ready(function(){
 		imgCopy.swipeTo(parseInt($('.time-line .swiper-slide-active .time-box').eq(0).attr('rel')), 1000, false);
   		},500)
   	}
+    // nav scrollTo
+    window.navTo = function(target){
+      switch(target){
+        case 1:
+        $('html,body').animate({scrollTop: $(".user").offset().top}, 800);
+        break;
+        case 2:
+        $('html,body').animate({scrollTop: $(".show").offset().top}, 800);
+        break;
+        case 3:
+        $('html,body').animate({scrollTop: $(".show-gilrs").offset().top}, 800);
+        break;
+        case 4:
+        $('html,body').animate({scrollTop: $(".the-owner").offset().top}, 800);
+        break;
+        case 5:
+        $('html,body').animate({scrollTop: $(".customer").offset().top}, 800);
+        break;
+      }
+    }
+    // hash to
+  navTo(parseInt(location.hash.substr(1,2)));
+    // scroll window
+    $(window).scroll(function() {
+        ($(document).scrollTop() > 200) ? $('.to-top').fadeIn() :  $('.to-top').fadeOut()
+    });
+    // click top
+    $('.to-top').click(function(){
+        $('html,body').animate({scrollTop: 0}, 800);
+    })
 });

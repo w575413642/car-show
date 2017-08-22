@@ -1,6 +1,9 @@
 /*header样式开始-----*/
 img{border:none;display: block;}
-
+body{font-size: 14px;}
+.swiper-slide{
+	cursor: pointer;
+}
 /*kv上固定的悬浮窗口*/
 .imgWrap{
 	overflow: hidden;
