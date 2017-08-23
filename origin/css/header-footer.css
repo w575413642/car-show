@@ -4,6 +4,93 @@ body{font-size: 14px;}
 .swiper-slide{
 	cursor: pointer;
 }
+	/*transition*/
+	.trans{
+		transition: all .6s;
+	}
+	/*sidebar*/
+	.sidebar{
+		position: fixed;
+		right: 0px;
+		top: 40%;
+		line-height: 60px;
+		z-index: 99999;
+	}
+	.sidebar .shape{
+		width: 70px;
+		background: #444444;
+		color: white;
+		height: 60px;
+		text-align: center;
+		-webkit-transform: skew(-27deg);
+	    -moz-transform: skew(-27deg);
+	    -o-transform: skew(-27deg);
+	    transform: skew(-27deg);
+	    margin-right: -27px;
+		transition-delay: .3s;
+	}
+	.sidebar .box-d {
+		right: -100px;
+	    z-index: -1;
+	    margin-left: 0px;
+	}
+	.sidebar .box-d i{
+		top: 0px;
+		left: 35%;
+		bottom: 0px;
+		right: 0px;
+		margin: auto;
+		display: block;
+		font-size: 33px;
+		color: white;
+		text-align: center;
+	}
+	.sidebar .font{
+		color: white;
+		background: #444444;
+		width: 65px;
+		text-align: center;
+	}
+	.sidebar .shape-left{
+	    float: right;
+	    border-bottom: 60px solid #444444;
+    	border-left: 30px solid transparent;
+	}
+	.sidebar .test-drive{
+	    position: absolute;
+	    right: 0px;
+	    top: 0;
+	    width: 160px;
+	    padding-left: 10px;
+	    cursor: pointer;
+	    /*box-shadow: 9px 8px 8px 0px #8e8b8b;*/
+	}
+	.sidebar .search-dealer{
+	    position: absolute;
+	    right: 0px;
+	    top: 60px;
+	    width: 190px;
+	    padding-left: 10px;
+	    cursor: pointer;
+	    /*box-shadow: 9px 8px 8px 0px #8e8b8b;*/
+	}
+	.sidebar .search-dealer .font{
+		width: 95px;
+		height: 59px;
+		border-top: 1px solid #737373;
+	}
+	.sidebar .over:hover .box-d{
+		margin-left: -90px;
+	}
+	.sidebar .over:hover .font{
+		background: red;
+	}
+	.sidebar .over:hover .shape{
+	    box-shadow: -2px 1px 6px 1px red;
+	}
+	.sidebar .over:hover .shape-left{
+	    border-bottom: 60px solid red;
+	}
 /*kv上固定的悬浮窗口*/
 .imgWrap{
 	overflow: hidden;

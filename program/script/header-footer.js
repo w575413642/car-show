@@ -1,1 +1,1 @@
-$(".menu .li a").click(function(t){(window.event||t).preventDefault(),1!=status&&window.open($(this).attr("href"))});
+$(".menu .li a").click(function(t){(window.event||t).preventDefault(),1!=status&&window.open($(this).attr("href"))}),$(".sidebar .test-drive").click(function(t){(window.event||t).preventDefault(),1!=status&&window.open($(this).attr("rel"))});

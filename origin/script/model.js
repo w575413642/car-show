@@ -10,8 +10,17 @@ $(document).ready(function(){
 		$('.layer').fadeOut()
 	});
 	// model-img
-		var model = new Swiper('.model-img',{
+	var model = new Swiper('.model-img',{
 		slidesPerView : 1,
 		paginationClickable: true,
 	})
+	// click
+	$('.click-swiper .left').on('click', function(e){
+   	 	e.preventDefault()
+    	model.swipePrev()
+  	})
+  	$('.click-swiper .right').on('click', function(e){
+    	e.preventDefault()
+    	model.swipeNext()
+  	})
 });

@@ -8,7 +8,10 @@
 		border: 0px;
 		display: block;
 	}
-	
+	.title-detail{
+		color: black;
+	}
+
 	/*content*/
 	.content{
 		overflow: hidden;

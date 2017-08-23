@@ -20,6 +20,7 @@ $(document).ready(function(){
 			timeSelect();
 		}
 	})
+
 	// img copy
 	var imgCopy = new Swiper('.img-copy',{
 		slidesPerView : 1,
@@ -54,27 +55,7 @@ $(document).ready(function(){
 		_this = $(this);
 		(mouse.seX == e.screenX && mouse.seY == e.screenY) ? mouse.click(_this) : mouse.tips();
 	});
-  // 
-  // and listen
-  $('.the-owner img,.ago img,.gilrs-swiper img').mousedown(function(e){
-    $('.layer').fadeIn()
-    var status = parseInt($(this).parent().parent().attr('rel'));
-    switch(status){
-      case 1:
-      $('.layer .layer-model').width('644px')
-      $('.layer .layer-model').height('400px')
-      break;
-      case 2:
-      $('.layer .layer-model').height('600px')
-      $('.layer .layer-model').width('475px')
-      break;
-      case 3:
-      $('.layer .layer-model').width('644px')
-      $('.layer .layer-model').height('400px')
-      break;
-    }
-    $('.layer-model .model-img').attr('src',$(this).attr('src'))
-  })
+
 	// ago show
 	window.agoSwiper = new Swiper('.ago-swiper',{
 		slidesPerView : 4,
@@ -84,7 +65,15 @@ $(document).ready(function(){
 	var gilrsSwiper = new Swiper('.gilrs-swiper',{
 		slidesPerView : 4,
 		calculateHeight : true,
-		paginationClickable: true
+		paginationClickable: true,
+    onSlideClick: function(swiper){
+      $('.layer').fadeIn();
+        // img layer
+      window.modelImg_P = new Swiper('.model-img',{
+        slidesPerView : 1,
+      })
+      modelImg_P.swipeTo(gilrsSwiper.clickedSlideIndex,100,false)
+    }
 	})
 	var ownerSwiper = new Swiper('.owner-swiper',{
 		slidesPerView : 4,
@@ -131,12 +120,21 @@ $(document).ready(function(){
     	timeLine.swipePrev()
     	timeSelect()
   	});
+    // model
+    $('.layer .layer-model .left').on('click', function(e){
+      e.preventDefault()
+      modelImg_P.swipePrev()
+    });
+    $('.layer .layer-model .right').on('click', function(e){
+      e.preventDefault()
+      modelImg_P.swipeNext()
+    });
   	// change timeSelect
   	function timeSelect(){
   		$('#data').get(0).selectedIndex = $('.time-line .swiper-slide-active').attr('rel');
   	}
   	/* ====> Dynamic change 1 
-  	   循环日期 */
+  	   循环日期 - loop.data*/
 
   	$('#data').change(function(){
   		timeLine.swipeTo(parseInt($(this).val()), 1000, false);
@@ -165,6 +163,7 @@ $(document).ready(function(){
   			break;
   		}
   	});
+    // focus
   	$('input').focus(function(){
   		switch(parseInt($(this).attr('rel'))){
   			case 1:
@@ -221,4 +220,8 @@ $(document).ready(function(){
     $('.to-top').click(function(){
         $('html,body').animate({scrollTop: 0}, 800);
     })
+    // test-drive -> click
+    $('.test-drive').click(function(){
+        navTo(5);
+    });
 });

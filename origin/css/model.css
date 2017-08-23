@@ -8,6 +8,39 @@
 		border: 0px;
 		display: block;
 	}
+		/*click*/
+	.click-swiper{
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		top: 47%;
+		z-index: 99999;
+	}
+	.click-swiper img{
+		width: 35px;
+		cursor: pointer;
+	}
+	.click-swiper .right{
+		float: right;
+		margin-right: 5%;
+		background: #d1d1d1;
+		transition: all .6s;
+	}
+	.click-swiper .left{
+		float: left;
+		margin-left: 5%;
+		background: #d1d1d1;
+		transition: all .6s;
+	}
+	.click-swiper .left:hover{
+		background: red;
+		opacity: .8
+	}
+	.click-swiper .right:hover{
+		background: red;
+		opacity: .8
+	}
+
 	/*layer*/
 	.layer{
 		position: fixed;
@@ -47,6 +80,10 @@
 	}
 	.layer .model-img img{
 		width: 100%;
+	}
+	.layer .click-swiper img{
+		height: auto;
+		width: 35px;
 	}
 	/*content*/
 	.content{
