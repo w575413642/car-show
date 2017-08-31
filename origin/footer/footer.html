@@ -78,39 +78,6 @@
 		</div>
 		
 		<script type="text/javascript">
-                var mq;
-                var isMinStage=false;
-                $(function(){ 
-                    mq=window.matchMedia("(max-width:1100px)");
-                    mq.addListener(function(changed) {
-                        changeSize640(changed.matches);
-                    });
-                    changeSize640(mq.matches);
-                    $('.about_top .item').each(function(index, element) {
-                        $($(element).find('p')[0]).click(function(e) {
-                            if(isMinStage){
-                                var _ul=$($(this).parent().find('ul')[0]);
-								if(!_ul.hasClass('minishow')){
-									_ul.slideToggle('fast');
-								}
-                            }
-                        });
-                    });
-                });
-                function changeSize640(b){
-                    isMinStage=b;
-                    if(b){
-                        $('.about_top .item').each(function(index, element) {
-                            var _ul=$($(element).find('ul')[0]);
-							if(!_ul.hasClass('minishow')){
-								_ul.hide();
-							}
-                        });
-                    }else{
-                        $('.about_top .item').each(function(index, element) {
-                            $($(element).find('ul')[0]).show();
-                        });
-                    }
-                }
+             
 		</script>
 

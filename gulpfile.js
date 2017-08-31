@@ -409,7 +409,7 @@ var gulp    = require('gulp'),
         gulp.start('images');
     });
     // 清除重构
-    gulp.task('LastDefault',function(){
+    gulp.task('pack',function(){
         gulp.start('html');
         classIfication(false)
         gulp.start('css');

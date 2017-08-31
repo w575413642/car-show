@@ -7,6 +7,9 @@
 	b{
 		font-weight: normal;
 	}
+	.mr-26{
+		margin-top: 26px;
+	}
 	/*to-top*/
 	.to-top{
 		position: fixed;left: 50%;margin-left: 43.2%;bottom: 100px;z-index: 1000;cursor: pointer;
@@ -25,14 +28,14 @@
 		display: none;
 	}
 	.layer .layer-model{
-		width: 457px;
+		width: 765px;
 	    position: absolute;
 	    left: 0;
 	    right: 0;
 	    top: 0;
 	    bottom: 0;
 	    margin: auto;
-	    height: 600px;
+	    height: 396px;
 	}
 	.layer .layer-model img{
 		height: 100%;
@@ -84,8 +87,27 @@
 	/*content*/
 	.content{
 		overflow: hidden;
-		background: url('../images/back.jpg') no-repeat 100% 0%;
-		background-size:100%;
+		/*background: url('../') no-repeat 100% 0%;
+		background-size:100%;*/
+		position: relative;
+	}
+	.content .bgm{
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		position: absolute;
+	}
+	.tips-black{
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		z-index: 999;
+		background: url(../images/tips-back.png);
+		width: 100%;
+	}
+	.tips-black p{
+		text-indent: 1em;
+		color: white;
 	}
 	/*user*/
 	.user{
@@ -123,8 +145,12 @@
 		color: #f3eeee;
     	background: #c5121f;
 	}
+	.user .this-week .swiper-slide{
+		position: relative;
+	}
 	.user .this-week{
 		width: 90%;
+		line-height: 45px;
 	}
 	.user .information{
 		width: 90%;
@@ -190,7 +216,7 @@
 	}
 	.toSwiper .date{
 		top: 48%;
-		right: 100px;
+		right: 9%;
 		background: #e5e5e5;
 		padding:0px 8px;
 		line-height: 30px;
@@ -199,6 +225,7 @@
 		position: absolute;
 		width: 100%;
 		height: 1px;
+		left:0px;
 	}
 	.toSwiper .click-swiper img{
 		width: 35px;
@@ -206,13 +233,13 @@
 	}
 	.toSwiper .click-swiper .right{
 		float: right;
-		margin-right: 5%;
+		margin-right: 2.5%;
 		background: #d1d1d1;
 		transition: all .6s;
 	}
 	.toSwiper .click-swiper .left{
 		float: left;
-		margin-left: 5%;
+		margin-left: 2.5%;
 		background: #d1d1d1;
 		transition: all .6s;
 	}
@@ -226,7 +253,7 @@
 	}
 	.toSwiper .more{
 		top: 48%;
-		right: 30px;
+		right: 2.5%;
 		color: white;
 		padding:0px 8px;
 		line-height: 30px;
@@ -247,7 +274,7 @@
 		height: 1px;
 		background: black;
 		position: absolute;
-		top: 18%;
+		top: 16%;
 		left: 10%;
 		width: 80%;
 	}
@@ -308,7 +335,9 @@
 	}*/
 	/*toSwiper-bom*/
 	.toSwiper-bom{
-		margin-top: 5%;
+		width: 80%;
+		margin: auto;
+		margin-top: -2%;
 		background: #edf4fb;
 	}
 	.toSwiper-bom .copy{
@@ -499,16 +528,6 @@
 		width: 100%;
 		margin-top: 5%;
 	}
-	.customer .user-msg .r-box div{
-		background: url(../images/index/user-input.png);
-    	border: 1px solid #434445;
-		width: 100%;
-		line-height: 45px;
-	}
-	.customer .user-msg .r-box select{
-		width: 100%;
-		height: 45px;
-	}
 	.customer .user-msg .r-box .t-5{
 		margin-top: 5%;
 	}
@@ -529,6 +548,10 @@
 	/*slec-box*/
 	.slec-box {
 		position: relative;
+		background: url(../images/index/user-input.png);
+    	border: 1px solid #434445;
+		width: 100%;
+		line-height: 45px;
 	}
 	.slec-box p{
 		color: #717272;
@@ -560,6 +583,8 @@
 		height: 45px;
 		left: 0px;
 		z-index: 999;
+		width: 100%;
+		height: 45px;
 	}
 	/* Demo Syles */
 	.device .arrow-left {
@@ -584,7 +609,7 @@
 		position: absolute;
 		left: 0;
 		text-align: center;
-		bottom: 16%;
+		bottom: 10%;
 		width: 100%;
 		z-index: 999;
 	}

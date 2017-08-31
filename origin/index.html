@@ -59,6 +59,8 @@
 	<!--#include file="head.html"-->
 	<!-- content -->
 	<div class="content">
+		<!-- bgm -->
+		<img src="images/back.jpg" class="bgm"/>
 		<!-- admission -->
 		<div class="user over common_box re_fl">
 		<!-- thisWeek -->
@@ -72,9 +74,21 @@
 				<!-- swiper -->
 				<div class="swiper-container this-week">
 			      <div class="swiper-wrapper">
-			        <div class="swiper-slide"><img src="images/index/this-week/1.jpg" alt=""></div>
-			        <div class="swiper-slide"><img src="images/index/this-week/2.jpg" alt=""></div>
-			        <div class="swiper-slide"><img src="images/index/this-week/3.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/index/this-week/1.jpg" alt="">
+					<div class="tips-black">
+						<p>123</p>
+			        </div>
+			        </div>
+			        <div class="swiper-slide"><img src="images/index/this-week/2.jpg" alt="">
+					<div class="tips-black">
+						<p>123</p>
+			        </div>
+			        </div>
+			        <div class="swiper-slide"><img src="images/index/this-week/3.jpg" alt="">
+					<div class="tips-black">
+						<p>123</p>
+			        </div>
+			        </div>
 			      </div>
 			    </div>
 				<div class="week-pagination"></div>
@@ -581,7 +595,7 @@
 			    </div>
 			</div>
 			<div class="the-owner common_box re_fl">
-			<h4 class="h4-black">车主风采</h4>
+			<h4>车主风采</h4>
 			<div class="btn">
 						<a href="model.html"><b>更多</b><i class="icon iconfont icon-you"></i></a>
 					</div>
@@ -620,22 +634,38 @@
 							<label for="">女士</label>
 						</div>
 					</div>
-					<input rel="2" type="text" class="num" value="请输入11位手机号码">
+					<div class="over">
+						<div class="fl t-1">
+							<input rel="1" type="text" class="num" value="请输入姓名">
+						</div>
+						<div class="fl t-1">
+							<div class="left fr slec-box mr-26">
+								<img src="images/index/sel-icon.png" alt="">
+								<p>选择车型</p>
+								<select name="" id="">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="bom over">
 					<h3>选择离您最近的经销商</h3>
 					<div class="fl l-box">
 						<div class="n-box">
 							<div class="left fr slec-box">
-							<img src="images/index/sel-icon.png" alt="">
-							<p>选择省份</p>
-							<select name="" id="">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-							</select>
-						</div>
+								<img src="images/index/sel-icon.png" alt="">
+								<p>选择省份</p>
+								<select name="" id="">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</div>
 						<div class="right fl slec-box">
 						<img src="images/index/sel-icon.png" alt="">
 							<p>选择城市</p>
@@ -647,6 +677,7 @@
 							</select>
 						</div>
 						<div class="time fl slec-box">
+							<img src="images/date.png" alt="">
 							<p>选择预约时间</p>
 							<input class="laydate-icon" id="demo" value="2014-6-25更新">
 						</div>
